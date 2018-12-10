@@ -1,4 +1,4 @@
-package my.examples;
+package my.examples.javaexam;
 
 /**
  * Created by jojoldu@gmail.com on 2018-12-10
