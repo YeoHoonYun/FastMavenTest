@@ -58,5 +58,7 @@ public class student_test {
         }
         System.out.println(String.format("%s\t\t%s\t\t%s\t\t%s\t\t%s","총점",totalGu,totalEn,totalMa,totalScore));
         System.out.println("총평균"+"\t"+String.format("%.1f",totalGu/3)+"\t\t"+String.format("%.1f",totalEn/3)+"\t\t"+String.format("%.1f",totalMa/3));
+
+        //Math.round((koreanScore/num)*100d)/100d
     }
 }
