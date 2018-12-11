@@ -1,73 +1,68 @@
 package my.examples.javaexam;
 
-import sun.awt.FontDescriptor;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
+import java.lang.*;
 
 /**
  * Created by cjswo9207u@gmail.com on 2018-12-11
  * Github : https://github.com/YeoHoonYun
  */
 public class Folder {
-    private String name; // NULL
-    private List<File> files;
-    private List<Folder> folders;
+    private String Name;
+    private List<File> FileNames;
+    private List<Folder> FolderNames;
 
-    // 기본 생성자는 생성자가 하나 없을 경우에 자동으로 생성된다.
-    // 기본 생성자가 아닐 경우엔 사용자가 직접 만들어준다.
-    // 생성자는 메소드와 비슷하지만 return 타입이 없고, 클래스명과 이름이 같다.
-    // 생성자는 필드를 초기화하는 코드를 가지고 있다.
-
-    public Folder(String name){
-        this.name = name;
-        files = new ArrayList<>();
-        folders = new ArrayList<>();
+    public Folder(String Name){
+        this.Name = Name;
+        FileNames = new ArrayList<>();
+        FolderNames = new ArrayList<>();
     }
 
-    public void rename(String name){
-        this.name = name;
-    }
-    public String getName(){
-        return name;
+    public void setName(String name) {
+        Name = name;
     }
 
-    public long getLength(){
-        long totalLength = 0;
+    public void setFileNames(File fileNames) {
+        FileNames.add(fileNames);
+    }
 
-        for (File file : files){
-            totalLength += file.getLength();
+    public void setFolderNames(Folder folderNames) {
+        FolderNames.add(folderNames);
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public Iterator<File> getFileNames() {
+        return FileNames.iterator();
+    }
+
+    public Iterator<Folder> getFolderNames() {
+        return FolderNames.iterator();
+    }
+
+    public long getLenth(){
+        int total = 0;
+        for (File file : this.FileNames){
+            total += file.getLength();
         }
-
-        for(Folder folder : folders){
-            totalLength = totalLength + folder.getLength();
+        for (Folder folder : this.FolderNames){
+            total += folder.getLenth();
         }
-
-        return totalLength; //TODO length는 계산되야한다.
+        return total;
     }
 
-    public void addFile(File file){
-        files.add(file);
+    public void deleteFolder(String name){
+        while(this.FolderNames.iterator().hasNext()){
+            if (this.FolderNames.iterator().next().equals(name)){
+                this.FolderNames.iterator().remove();
+            }
+        }
     }
-    public void deleteFile(String fileName){
-        //TODO fileName으로 파일을 지운다.
-    }
-    //고민거리. 왜 files를 티런하지 않고, files.iterator()를 리턴할까?
-    public Iterator<File> fileIterator(){
-        return files.iterator(); //모든 파일을 접근하여 꺼낼수가 있음.
-    }
-
-    public void addFolder(Folder folder){
-        folders.add(folder);
-    }
-    public void deleteFolder(String folderName){
-        //TODO FolderName으로 파일을 지운다.
-    }
-    public Iterator<Folder> folderIterator(){
-        return folders.iterator();
-    }
-
 }
 
 // Folder Folder = new Folder();

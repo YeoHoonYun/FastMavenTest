@@ -4,37 +4,42 @@ package my.examples.javaexam;
  * Created by cjswo9207u@gmail.com on 2018-12-11
  * Github : https://github.com/YeoHoonYun
  */
+
+//새로운 폴더를 만든다.
+/*
+c:\mywork\java\java1.txt  (900)
+c:\mywork\java\java2.txt  (800)
+c:\mywork\doc\readme.txt  (700)
+c:\mywork\hello   (500)
+ */
 public class FolderFileExam {
     public static void main(String[] args){
-        String basePath = "C:\\mywork\\";
+        Folder myworkFolder = new Folder("c:\\mywork\\");
+        Folder javaFolder = new Folder("java\\");
+        Folder docFolder = new Folder("doc\\");
 
-        Folder mywork = new Folder(basePath);
-
-        Folder javaFolder = new Folder(basePath+"java\\");
-        Folder docFolder = new Folder(basePath+"doc\\");
-
-        mywork.addFolder(javaFolder);
-        mywork.addFolder(docFolder);
+        myworkFolder.setFolderNames(javaFolder);
+        myworkFolder.setFolderNames(docFolder);
 
         File java1File = new File("java1.txt");
         java1File.setLength(900);
-        javaFolder.addFile(java1File);
-
+        javaFolder.setFileNames(java1File);
         File java2File = new File("java2.txt");
         java2File.setLength(800);
-        javaFolder.addFile(java2File);
-
-        File readeFile = new File("readme.txt");
-        readeFile.setLength(700);
-        docFolder.addFile(readeFile);
-
+        javaFolder.setFileNames(java2File);
+        File readFile = new File("readme.txt");
+        readFile.setLength(700);
+        docFolder.setFileNames(readFile);
         File helloFile = new File("hello");
         helloFile.setLength(500);
-        mywork.addFile(helloFile);
+        myworkFolder.setFileNames(helloFile);
 
-        System.out.println(mywork.getLength());
-        System.out.println(javaFolder.getLength());
-        System.out.println(docFolder.getLength());
+//        System.out.println(myworkFolder.getLenth());
+//        System.out.println(javaFolder.getLenth());
+//        System.out.println(docFolder.getLenth());
+
+        myworkFolder.deleteFolder("java");
+        System.out.println(myworkFolder.getLenth());
 
     }
 }

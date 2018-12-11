@@ -11,16 +11,20 @@ public class File {
     public File(String name){
         this.name = name;
     }
-    public void rename(String name){
+
+    public void setName(String name) {
         this.name = name;
     }
-    public String getname(){
-        return name;
-    }
-    public void setLength(long length){
+
+    public void setLength(long length) {
         this.length = length;
     }
-    public long getLength(){
+
+    public String getName() {
+        return name;
+    }
+
+    public long getLength() {
         return length;
     }
 }
