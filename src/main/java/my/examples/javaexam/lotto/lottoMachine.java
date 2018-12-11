@@ -18,7 +18,6 @@ public class lottoMachine {
     public void setlottBalls(List<lottoBall> balls){
         lottoBalllist = balls;
         Collections.shuffle(lottoBalllist);
-
     }
     public List<Integer> getlottoBalls(){
         for (int i=0; i<6;i++){
@@ -26,5 +25,4 @@ public class lottoMachine {
         }
         return lottoResult;
     }
-
 }
