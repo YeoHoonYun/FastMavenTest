@@ -35,7 +35,10 @@ public class Folder {
         this.files.add(files);
     }
 
-    public List<Folder> getFolders() {
+    public Iterator<Folder> getFolders() {
+        return folders.iterator();
+    }
+    public List<Folder> getFolders2() {
         return folders;
     }
 

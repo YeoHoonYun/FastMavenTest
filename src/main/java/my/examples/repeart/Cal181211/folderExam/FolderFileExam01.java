@@ -1,5 +1,8 @@
 package my.examples.repeart.Cal181211.folderExam;
 
+import java.util.Iterator;
+import java.util.List;
+
 /**
  * Created by cjswo9207u@gmail.com on 2018-12-11
  * Github : https://github.com/YeoHoonYun
@@ -39,17 +42,28 @@ public class FolderFileExam01 {
         helloFile.setLength(500);
         myworkFolder.setFiles(helloFile);
 
-        // 각 폴더의 길이
-        System.out.println(myworkFolder.getLength());
-        System.out.println(javaFolder.getLength());
-        System.out.println(docFolder.getLength());
+//        // 각 폴더의 길이
+//        System.out.println(myworkFolder.getLength());
+//        System.out.println(javaFolder.getLength());
+//        System.out.println(docFolder.getLength());
+//
+//        //각 파일 삭제
+//        javaFolder.deleteFile("java2.txt");
+//        //myworkFolder.deleteFolder("java");
+//
+//        System.out.println(myworkFolder.getLength());
+//        System.out.println(javaFolder.getLength());
+//        System.out.println(docFolder.getLength());
+        Iterator<Folder> iter = myworkFolder.getFolders();
+        while(iter.hasNext()){
+            System.out.println(iter.next().getName()+"***");
+            iter.remove();
+        }
 
-        //각 파일 삭제
-        javaFolder.deleteFile("java2.txt");
-        //myworkFolder.deleteFolder("java");
-
-        System.out.println(myworkFolder.getLength());
-        System.out.println(javaFolder.getLength());
-        System.out.println(docFolder.getLength());
+        List<Folder> iter2 = myworkFolder.getFolders2();
+        for(int i=0;i<iter2.size();i++){
+            System.out.println(iter2.get(i).getName());
+            iter2.remove(i);
+        }
     }
 }

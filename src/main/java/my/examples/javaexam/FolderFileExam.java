@@ -1,5 +1,8 @@
 package my.examples.javaexam;
 
+import javax.swing.text.html.HTMLDocument;
+import java.util.Iterator;
+
 /**
  * Created by cjswo9207u@gmail.com on 2018-12-11
  * Github : https://github.com/YeoHoonYun
@@ -38,8 +41,13 @@ public class FolderFileExam {
 //        System.out.println(javaFolder.getLenth());
 //        System.out.println(docFolder.getLenth());
 
-        myworkFolder.deleteFolder("java");
-        System.out.println(myworkFolder.getLenth());
+//        myworkFolder.deleteFolder("java");
+//        System.out.println(myworkFolder.getLenth());
+        myworkFolder.getFolderNames();
+//        while(myworkFolder.getFolderNames().hasNext()) {
+//            System.out.println(myworkFolder.getFolderNames().next());
+//        }
+
 
     }
 }

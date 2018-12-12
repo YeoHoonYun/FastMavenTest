@@ -1,4 +1,4 @@
-package my.examples.javaexam;
+package my.examples.javaexam.car;
 
 public abstract class Car {
     public void run() {

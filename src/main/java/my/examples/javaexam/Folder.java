@@ -37,11 +37,17 @@ public class Folder {
         return Name;
     }
 
-    public Iterator<File> getFileNames() {
+//    public List<File> getFileNames() {
+//        return FileNames;
+//    }
+    public Iterator getFileNames() {
         return FileNames.iterator();
     }
 
     public Iterator<Folder> getFolderNames() {
+        while(FolderNames.iterator().hasNext()) {
+            System.out.println(FolderNames.iterator().next());
+        }
         return FolderNames.iterator();
     }
 
