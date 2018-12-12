@@ -1,0 +1,32 @@
+키보드로부터 한줄씩 입력받아 파일에 한줄씩 출력하시오.
+
+(주인공)
+키보드, 모니터 : System.in(InputStream), System.out(PrintStream)
+
+키보드 : System.in을 사용하는 구나.
+주인공 : 1byte, 1char, byte[], char[] 단위로 읽어들인다.
+
+한줄씩 입력받는다. (동사) => 메소드
+
+BufferedReader br = new BufferedReader(Reader); - 장식!!
+readLine()이라는 메소드를 가지고 있다. 한 줄 읽어들인다.
+
+FileWriter : 주인공. 파일에 쓴다. 1char, char[] 쓴다.
+
+한줄씩 출력하시오. : Printwriter (장식), println() 다양한 메소드를 가지고 있다.
+
+키보드로부터 한줄씩 입력받아 파일에 한 줄씩 출력하시오.
+
+키보드 : System.in(InputStream) -주인공
+한줄 읽어들인다. : BufferedReader
+
+파일쓴다. : FileWriter
+한줄 쓴다. : PrintWriter
+
+-------------------------------------
+정수, 실수, boolean값을 파일에 저장하시고.
+byte, char, byte[], char[] 값을 읽고 쓰는 것은 주인공.
+
+정수를 저장한다.
+실수를 저장한다.
+boolean 저장한다.

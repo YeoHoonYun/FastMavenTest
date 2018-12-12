@@ -1,0 +1,25 @@
+자바 IO를 공부하기전에 꼭 알아야할 것 하나.
+1) 자바 IO는 데코레이터 패턴으로 구성된다.(주인공과 정식을 구분하자.)
+2) 표준입력 : System.in (키보드, InputStream)
+   표준출력 : System.out(모니터, PrintStream)
+   표준에러출력 : System.err(모니터, PrintStream)
+3) 자바 IO는 바이트(byte)입출력과 문자(char)입출력이 있다.
+   바이트입출력 : 클래스 이름이 Stream으로 끝난다.
+                 입력 - 000InputStream으로 끝난다.
+                 출력 - 000OutputStream츠로 끝난다.
+   문자 입출력 : 클래스 이름이 Reader, Writer로 끝난다.
+                 입력 - 000Reader로 끝난다.
+                 출력 - 000Writer로 끝난다.
+4) 자바 IO는 추상클래스인 InputStream, OutputStream, Reader, Writer중에 하나를 상속받는다.
+5) 장식에 해당하는 클래스는 생성자에 InputStream, OutputStream, Reader, Writer클래스를 파라미터로 받아들인다.
+
+--------------------------------------------------------------------------------------------
+
+객체 직렬화
+객체를 바이트의 흐름으로 만들어서 전송(어딘가에 쓰겠다.)
+객체 직렬화가 되려면, 특별한 인터페이스를 구현해야한다.
+
+어떤 객체가 직렬화가 가능하느냐?
+
+Serializable 인터페이스를 구현하고 있거나,
+기본형(boolean, byte, short, int, long, float, double, char)

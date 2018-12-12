@@ -1,6 +1,7 @@
-package my.examples.javaexam;
+package my.examples.javaexam.car;
 
 import my.examples.javaexam.car.Box;
+import my.examples.javaexam.car.Item;
 
 /**
  * Created by jojoldu@gmail.com on 2018-12-09
