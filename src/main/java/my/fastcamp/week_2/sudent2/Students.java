@@ -12,6 +12,16 @@ public class Students implements Comparable<Students>{
     private Integer eng;
     private Integer math;
 
+    @Override
+    public String toString() {
+        return "Students{" +
+                "name='" + name + '\'' +
+                ", kor=" + kor +
+                ", eng=" + eng +
+                ", math=" + math +
+                '}';
+    }
+
     public Students(String name){
         this.name = name;
     }
@@ -53,10 +63,6 @@ public class Students implements Comparable<Students>{
 
     public void setMath(int math) {
         this.math = math;
-    }
-
-    public String toString(){
-        return name + ":" + kor + ":" + eng + ":" + math;
     }
 
     @Override
