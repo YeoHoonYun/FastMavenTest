@@ -26,7 +26,6 @@ public class StudentExam {
         Students students2 = new Students("Aim",100,100,100);
         Students students3 = new Students("Aim",50,50,50);
 
-        //
         System.out.println(students1.equals(students2));
         System.out.println(students1.equals(students3));
 

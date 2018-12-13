@@ -65,15 +65,27 @@ public class Students implements Comparable<Students>{
         this.math = math;
     }
 
+
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Students students = (Students) o;
+//        return Objects.equals(name, students.name) &&
+//                Objects.equals(kor, students.kor) &&
+//                Objects.equals(eng, students.eng) &&
+//                Objects.equals(math, students.math);
+//    }
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object o){
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Students students = (Students) o;
-        return Objects.equals(name, students.name) &&
-                Objects.equals(kor, students.kor) &&
-                Objects.equals(eng, students.eng) &&
-                Objects.equals(math, students.math);
+
+        return this.getKor().equals(students.getKor()) &&
+                this.getMath().equals(students.getMath()) &&
+                this.getEng().equals(students.getEng()) &&
+                this.getName().equals(students.getName());
     }
 
     @Override
