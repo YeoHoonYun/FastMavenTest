@@ -24,3 +24,13 @@
 [TopCoderGub Link] : https://github.com/YeoHoonYun/TopCoder "TopCoder Github"
 
 --------------------------------------------------------------------------
+## 2018-12-14
+### 패스트캠퍼스 JAVA 웹프로그래밍 과정 10일차
+* 선생님 조별 모임
+* TopCoder 
+  - InterestingDigit
+
+####조사 해볼 내용
+* 샤딩, MSA(Microservice Architectur)
+* RabbitMQ 스프링
+---------------------------------------------------------------------------
