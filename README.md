@@ -32,11 +32,16 @@
 
 #### 조사 해볼 내용
 * 샤딩 : 관계형 데이터베이스에서 대량의 데이터를 처리하기 위해서 데이터를 파티셔닝하는 기술
+
 [참조 Link] : http://genesis8.tistory.com/211 "Sharding"
+
 * MSA(Microservice Architectur) : 단일 응용 프로그램을 나누어 작은 서비스의 조합으로 구축하는 방식
+
 [참조 Link] : http://alwayspr.tistory.com/20 "MSA"
 
 * RabbitMQ 스프링
   - RabbitMQ : AMQP를 구현한 오픈 소스 메시지 브로커 소프트웨어 Publisher(Producer)로부터 메시지를 받아 Comsumer에게 라우트하는 것이 주된 역할
+
 [참조 Link] : http://blog.naver.com/PostView.nhn?blogId=tmondev&logNo=220419853534&parentCategoryNo=&categoryNo=6&viewDate=&isShowPopularPosts=false&from=postView "RabbitMQ"  
+
 ---------------------------------------------------------------------------
