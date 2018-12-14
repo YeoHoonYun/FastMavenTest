@@ -1,0 +1,36 @@
+1. JDBC(Java DataBase Connectivity)
+ - 자바를 이용하여 데이터베이스에 접근하여 SQL문을 수행할 수 있도록 제공하는 API이다.
+ - 모든 DBMS에서 공통적으로 사용할 수 있는 인터페이스와 클래스로 구성되고, 밴더에게 구현하도록했다.
+ - 각 DBMS의 벤더에서 제공되는 구현클래스를 JDBC 드라이버라고 한다.
+
+2. JDBC의 구조와 역할
+ - JDBC 인터페이스와 JDBC 드라이버로 구성되어 있다.
+ - 응용프로그램에서 SQL 문을 만들어 JDBC 인터페이스를 통해 전송하면 JDBC 드라이버에서 DBMS에 접속을 시도하여 SQL문을 전송하게 된다.
+ - 그 결과가 JDBC 드라이버에서 JDBC 인터페이스에게 전달되고 다시 응용프로그램으로 전달되어 SQL 문에 대한 결과를 받아 볼 수 있다.
+ - 응용프로그램과 DBMS 간의 다리 역할을 한다.
+
+3. JDBC를 사용단계
+ - [1] JDBC API import
+    - import java.sql.*;
+    - JDBC가 포함된 패키지를 import 한다.
+ - [2] 드라이버 로드
+    - Class, forName("oracle.jdbc.driver.OracleDriver");
+    - Class.forName은 동적으로 JDBC 드라이버 클래스를 로딩한다.
+    - ClassNotFoundException 예외가 발생하면 철자확인과 이클립스에 jar파일 등록여부 확인을 한다.
+ - [3] Connection
+    - Connection con = DriverManager.getConnection("jdbc:oracle:thin@아이피:포트:SID","유저","비밀번호");
+    - getConnection 메서도를 이용하여 Connection 객체를 얻어 올 수 있다.
+ - [4] Statement & PrepareStatement
+    - Statement stmt = con.createStatement();
+    - PrepareStatement psmt = con.prepareStatement();
+    - Statement & PrepareStatement 객체를 생성하면 SQL을 전송할 수 있다.
+    - executeQuery() 메서드는 일반적으로 select SQL문에 사용하고, 반환은 ResultSet 객체로 반환한다.
+    - executeUpdate() 메서드는 select 이외의 SQL문을 쓸 때 사용하고, 반환은 갱신된 행의 수를 반환한다.
+    - execute() 메서드는 SQL문이 무엇인지 모를 때 사용하고, 반환은 true이면 ResultSet 객체고, false이면 결과가 없거나 갱신된 행의 수의 경우이다.
+ - [5] ResultSet
+    - 위에서 실행된 결과로 ResultSet 객체를 리턴받았다. ResultSet 객체는 결과물을 추상화한 인터페이스다.
+    - Result 객체는 결과물은 가져올 수 있는 다양한 메서드를 제공하고, 커서(cursor)의 개념을 가지고 있다.
+    - 결과물에 대해 한개의 행만을 처리할 수 있따. 행을 이동하는 것이 next()메서드이다.
+    - 행을 이동한 뒤에는 실제 결과물을 가져오기 위해서는 getXXX(인덱스 컬럼명 또는 인덱스 번호) 자료형 타입에 맞는 메서드를 사용한다.
+ - [6] close
+    - Connection, Statement & PrepareStatement, ResultSet 객체를 사용이 끝난 후에 ResultSet, Statement & PrepareStatement, Connection 순으로 종료를 해준다.
