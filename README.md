@@ -20,5 +20,5 @@
   - KiwiJuiceEasy
   - Interesting Party
   - Cyptography
-  
-Link : [TopCoderGub Link] : https://github.com/YeoHoonYun/TopCoder "TopCoder Github"
+[TopCoderGub Link] : https://github.com/YeoHoonYun/TopCoder "TopCoder Github"
+--------------------------------------------------------------------------
