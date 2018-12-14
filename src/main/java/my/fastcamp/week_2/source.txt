@@ -1,3 +1,117 @@
+Interface(인스턴스로 사용할 수 없다.)
+	Iterator - 컬렉션에 저장된 요소를 읽어오는 방법을 Iterator 인터페이스로 표준화 (순서O)
+		- hasNext() boolean 있는지 없는지
+		- next() E
+
+	collection - 순서 X, 중복 O
+		- add(E)
+		- iterator() Interator
+
+		Set - 중복 X(기준), 순서 X
+			- 기준? : Object의 hashCode() / equals()
+			- add(E) Boolean
+
+		list - 중복 O, 순서 O
+			- get(index) E
+
+	map(key, value)
+		- put(key,value)
+		- get(key) value
+		- keySet() Set
+
+상속(=) < 의존(-)
+			collection => List, Set
+Iterator -> collection에 저장된 값을 꺼낼 떄
+
+의존
+Map.keySet -> set
+
+Map M = New HashMap();
+
+인터페이스는 인스턴스가 될수 없다.
+
+* 단축키
+
+import 라는 것 다른 해당 클래스터 어디 클래스에 속해있는지 선언(java.lang은 자동적으로 적용되어 있음.)
+
+바꾼 변수에 대해서 자동으로 변환하는 refactor - rename(Sift - f6)
+
+Project - open Modul settings - Modeles - Language level
+-------------------------------------------------------
+
+Maven CoC(Convention over Configuration)
+시스템들과 라이브러리, 프레임워크는 별도의 설정 시스템 없이 바로 실행될 수 있어야 한다.는 개념
+
+-------------------------------------------------------
+1. 키보드로 부터 입력받는 방법(Scanner)
+2. Student 클래스 생성
+	핃드 : name, 국, 영, 수 점수
+3. 학생의 이름과 점수를 입력 받아서 리스트에 저장, 이름을 입력받아서 리스트에 저장
+
+이름 : ?
+국어 : ?
+영어 : ?
+수학 : ?
+계속하시겠습니까?(Y/N)
+Y
+이름 : ?
+국어 : ?
+영어 : ?
+수학 : ?
+계속하시겠습니까?(Y/N)
+N
+이름 국어 영어 수학
+kim
+lee
+총점
+평균
+------------------------------------------------------------
+폴더 	->		 파일
+		1:N
+-이름			- 이름
+-생성날짜		- 생성날짜
+(set)
+
+--------------------------------------
+
+1. String 클래스가 가지고 있는 메소드는 무엇이 있을까?
+- A라는 문자열이 있고, B라는 문자열이 있을 떄 값이 같은지 비교하려면?
+  A.equals(B) 리턴값은 false나 True가 나온다.
+
+다른 사람들이 만든 메소드에 대한 연습이 필요하다.
+
+2. Iterator를 이용하여 삭제할 수 있다.
+
+3. 반복문(while, for, bo while)에서 빠져나가려면 break를 사용한다.
+
+4. Folder와 File는 구조를 이해한다.
+
+5. 클래스는 생성자를 여러개 가질 수 있다. 생성자가 없다면 기본 생성자가 자동으로 생서된다. 인스턴스가 생성될 때 어떤 특정값을 가지도록 하려면 생성자에게 값을 전달한다.
+
+6. 메소드도 같은 이름의 메소드를 여러개 가질 수 있다.
+
+----------------------------------------
+sout + tab System.out.println()
+shift + f10 실행
+shift + f6 리네임
+alt + insert : 메소드 생성
+
+정수를 실수로 나눈다.
+
+----------------------------------------
+유튜브 15~18까지 보기
+
+public void deleteFile(String name){
+	Iterator<T> T = files.iterator();
+	while(T.hasNext()){
+		File file = T.next();
+		if(file.getName().equals(name)){
+			iterator.remove();
+			break;
+		}
+	}
+}
+-----------------------------------------------------------
 같다 => 참조가 같다. ==, !=
         값이 같다. equals메소드 -> Object가 가진다. 오버라이딩 한다.(내가 만든 값을 비교할때 쓰임. => 오버라이딩을 위한 메소드지 쓸모는 없음)
                 , 기본형(int, boolean, long, double) ==
