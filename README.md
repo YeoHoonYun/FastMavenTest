@@ -11,3 +11,12 @@
   - 수집 데이터 : WEB 서버 구축 후 /var/log/http/access 로그 데이터 수집
   - http 요청은 python requests를 이용
 * Spark-zeppelin + Hadoop-Hbase 설치 예정(~16) -> 추후 다른 Repository에 올릴 예정
+--------------------------------------------------------------------------
+## 2018-12-13
+### 패스트캠퍼스 JAVA 웹프로그래밍 과정 9일차
+* equals / HashCode / toString 메소드 Odject 상속 및 개념 정리
+* 작성 예제 : Goods, Students
+* TopCoder 
+ - KiwiJuiceEasy
+ - Interesting Party
+ - Cyptography 
