@@ -1,3 +1,4 @@
+![Github Test](https://cdn-images-1.medium.com/max/1600/1*Np072ULSuNmNeQ2wQ_0kAA.png "github") 
 ## 2018-12-11
 ### 패스트캠퍼스 JAVA 웹프로그래밍 과정 7일차
 * folderExam, lottoExam, studentExam의 대한 UML 및 프로그래밍 코딩
