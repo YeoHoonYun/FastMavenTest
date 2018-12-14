@@ -17,6 +17,6 @@
 * equals / HashCode / toString 메소드 Odject 상속 및 개념 정리
 * 작성 예제 : Goods, Students
 * TopCoder 
- - KiwiJuiceEasy
- - Interesting Party
- - Cyptography 
+  - KiwiJuiceEasy
+  - Interesting Party
+  - Cyptography 
