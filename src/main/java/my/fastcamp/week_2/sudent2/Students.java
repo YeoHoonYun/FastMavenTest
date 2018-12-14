@@ -12,16 +12,6 @@ public class Students implements Comparable<Students>{
     private Integer eng;
     private Integer math;
 
-    @Override
-    public String toString() {
-        return "Students{" +
-                "name='" + name + '\'' +
-                ", kor=" + kor +
-                ", eng=" + eng +
-                ", math=" + math +
-                '}';
-    }
-
     public Students(String name){
         this.name = name;
     }
@@ -66,27 +56,27 @@ public class Students implements Comparable<Students>{
     }
 
 
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//        Students students = (Students) o;
-//        return Objects.equals(name, students.name) &&
-//                Objects.equals(kor, students.kor) &&
-//                Objects.equals(eng, students.eng) &&
-//                Objects.equals(math, students.math);
-//    }
-    @Override
-    public boolean equals(Object o){
+    public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         Students students = (Students) o;
-
-        return this.getKor().equals(students.getKor()) &&
-                this.getMath().equals(students.getMath()) &&
-                this.getEng().equals(students.getEng()) &&
-                this.getName().equals(students.getName());
+        return Objects.equals(name, students.name) &&
+                Objects.equals(kor, students.kor) &&
+                Objects.equals(eng, students.eng) &&
+                Objects.equals(math, students.math);
     }
+//    @Override
+//    public boolean equals(Object o){
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//
+//        Students students = (Students) o;
+//
+//        return this.getKor().equals(students.getKor()) &&
+//                this.getMath().equals(students.getMath()) &&
+//                this.getEng().equals(students.getEng()) &&
+//                this.getName().equals(students.getName());
+//    }
 
     @Override
     public int hashCode() {
@@ -96,5 +86,15 @@ public class Students implements Comparable<Students>{
     @Override
     public int compareTo(Students o) {
         return this.getMath() - this.getMath();
+    }
+
+    @Override
+    public String toString() {
+        return "Students{" +
+                "name='" + name + '\'' +
+                ", kor=" + kor +
+                ", eng=" + eng +
+                ", math=" + math +
+                '}';
     }
 }

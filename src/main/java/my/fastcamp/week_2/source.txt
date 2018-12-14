@@ -7,3 +7,33 @@
     => 데이터를 표현하는 객체는 equals를 가지고 있다. + hashCode도 마찬가지 / Hash 알고리즘를 사용 - 유일한 값(Set, Map)
     => 기준을 정해서 값을 비교
     => 자료구조 객체(Hash000)
+
+-------------------------------------------------------------------------
+# 자바 기본 프로그래밍(1주)
+ * 간단한 채팅 프로그램 or 웹 서버 => 자바 IO 및 네트워크
+
+# 데이터베이스 프로그래밍(1주)
+ * MySQL Database 사용, H2 Database 사용
+ * SQL
+ * JDBC 프로그래밍
+
+HTML/CSS - 스스로 공부한다.
+
+# 웹 프로그래밍 기본 (Servlet & JSP)(1주)
+ * Serlvet의 동작원리(라이프싸이클)
+ * JSP의 동작원리, EL & JSLT
+
+ -> 간단한 게시판 프로그램.(1주)
+
+Spring 프레임워크(2~3주)
+ * Spring Core
+ * Spring MVC
+ * Spring JDBC
+ * Spring Data JPA
+ * Spring Security
+
+ - 게시판을 스프링으로 바꾼다.
+
+Spring Boot(1주)
+
+3개월 프로젝트. 되도록이면 본인이 운영할 사이트
