@@ -51,4 +51,4 @@
 * 조별 프로젝트
  - BusinessCard UML 및 클래스 구현
  - BusinessCard 기능 구현(UI 및 Scanner 구현 필요)
- - 
+  = 데이터 CRUD 기능 구현 및 백업 파일 생성, 파싱
