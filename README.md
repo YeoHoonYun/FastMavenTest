@@ -46,3 +46,9 @@
 [참조 Link] : http://blog.naver.com/PostView.nhn?blogId=tmondev&logNo=220419853534&parentCategoryNo=&categoryNo=6&viewDate=&isShowPopularPosts=false&from=postView "RabbitMQ"  
 
 ---------------------------------------------------------------------------
+## 2018-12-17
+### 패스트캠퍼스 JAVA 웹프로그래밍 과정 11일차
+* 조별 프로젝트
+ - BusinessCard UML 및 클래스 구현
+ - BusinessCard 기능 구현(UI 및 Scanner 구현 필요)
+ - 
